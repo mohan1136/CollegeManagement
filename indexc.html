@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+       * {box-sizing: border-box;}
+
+        body
+        { 
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(to left,#000066,#a3297a);
+        }
+        #view1
+        {
+            background-image: url('bg.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+            position: relative;
+        }
+        #overlay
+        {
+            position: absolute;
+            top:0;
+            left: 0;
+            width:100%;
+            height:100%;
+            background-color: rgba(0,0,0,0.2);
+            transition: 1s;
+        }
+        .navbar
+        {
+            overflow: hidden;
+            background-color: rgba(255,255,255,0.3);
+            padding-top: 10px;
+            border-bottom:4px solid black;
+            padding-bottom: 8px;
+        }
+
+        .navbar a 
+        {
+          float: left;
+/*          font-size: 16px;
+*/          color: black;
+          text-align: center;
+          padding: 14px 16px;
+          text-decoration: none;
+        }
+
+        .drop 
+        {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .dropdown 
+        {
+          float: left;
+          overflow: hidden;
+        }
+
+        .dropdown .dropbtn 
+        { 
+          border: none;
+          outline: none;
+          color: black;
+          padding: 14px 16px;
+          background-color: inherit;
+          font-family: inherit;
+          margin: 0;
+          font-weight: bold;
+          font-size: 20px;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn 
+        {
+          background-color:#9FCCD4;
+          border-radius:4px; 
+        }
+
+        .dropdown-content 
+        {
+          display: none;
+          position: absolute;
+          background-color: #f9f9f9;
+          min-width: 160px;
+          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+          z-index: 1;
+        }
+
+        .dropdown-content a 
+        {
+          float: none;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
+          text-align: left;
+        }
+
+        .dropdown-content a:hover 
+        {
+          background-color: rgb(204, 221, 255);
+        }
+
+        .dropdown:hover .dropdown-content 
+        {
+          display: block;
+        }
+        #home
+        {
+            margin-left:130px;
+        }
+        #quote
+        {
+            position: absolute;
+            top:25%;
+            left:20%;
+            background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+            color:transparent;
+            -webkit-background-clip: text;
+        }
+        #top
+        {
+            position: absolute;
+            top:-5%;
+            left:10%;
+            color:black;
+            width:0px;
+            border-top:20px solid violet;
+            transition: 2s;
+        }
+        #right
+        {
+            position: absolute;
+            top:11%;
+            right:19%;
+            color:black;
+            height:0px;
+            border-left:20px solid lightblue;
+            transition: 2s;
+        }
+        #bottom
+        {
+            position: absolute;
+            top:75%;
+            right:22%;
+            color:black;
+            width:0px;
+            border-top:20px solid yellow;
+            transition: 2s;
+        }
+        #left
+        {
+            position: absolute;
+            bottom:12%;
+            left:10%;
+            color:black;
+            height:0px;
+            border-left:20px solid rgb(214,164,146);
+            transition: 2s;
+        }
+        #colorQuote
+        {
+            width:600px;
+            height:190px;
+            position: absolute;
+            top:260px;
+            left:400px;
+        }
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+
+
+<body>
+
+<div id="view1">
+    <div id="overlay">
+
+        <div class="navbar">
+            <a id="home" class="drop" href="#home">Home</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Admissions <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="StudentRegistration.html">Registration</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Academics<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="#">Academic Calender</a>
+                    <a href="#">Time Tables</a>
+                    <a href="#">Examinations</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Departments<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="cse.php?branch=CSE&branchFullName=Computer Science and Engineering">Computer Science and Engineering</a>
+                    <a href="cse.php?branch=ECE&branchFullName=Electronics and Communication Engineering">Electronics and Communication Engineering</a>
+                    <a href="cse.php?branch=MECH&branchFullName=Mechanical Engineering">Mechanical Engineering</a>
+                    <a href="cse.php?branch=CIVIL&branchFullName=Civil Engineering">Civil Engineering</a>
+                    <a href="#">Chemical Engineering</a>
+                    <a href="#">Agricultural Engineering</a>
+                    <a href="#">Mining and Metullurgical Engineering</a>
+                </div>
+           </div> 
+          
+            <div class="dropdown">
+                <button class="dropbtn">Students<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="StudentLogin.html">Login</a>
+                </div>
+            </div> 
+
+            <div class="dropdown">
+                <button class="dropbtn">Hostel<i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content">
+                    <a href="loginHome.php">Login</a>
+                </div>
+            </div> 
+
+            <a href="#contact" class="drop">Developer</a>
+            <a href="#contact" class="drop" style="margin-left: 16px;" onclick="changeVisibility1()">Admin</a>
+            <a href="#contact" class="drop" >Contact Us</a>
+        </div>
+		<div id="colorQuote">
+            <p id="top"></p>
+            <p id="right"></p>
+            <h1 id="quote">Enhance Your Skills</h1>
+            <p id="bottom"></p>
+            <p id="left"></p>
+        </div>
+
+
+
+    </div>
+</div>
+
+
+<script>
+
+    function resize()
+    {
+        var heights = window.innerHeight;
+        document.getElementById("view1").style.height = heights+ "px";
+    }
+    resize();
+    window.onresize = function() 
+    {
+        resize();
+    };
+    function effect()
+    {
+        document.getElementById("top").style.width = "500px";
+        document.getElementById("right").style.height = "148px";
+        document.getElementById("bottom").style.width = "500px";
+        document.getElementById("left").style.height = "150px";
+    }
+    window.onload=function()
+    {
+        effect();
+    };
+    
+
+</script>
+</body>
+</html>
+                                                                                                                                                                            
